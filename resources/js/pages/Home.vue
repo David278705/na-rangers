@@ -358,9 +358,7 @@
                             </label>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label
-                                        class="block text-xs text-zinc-600"
-                                    >
+                                    <label class="block text-xs text-zinc-600">
                                         Nombre
                                     </label>
                                     <input
@@ -373,9 +371,7 @@
                                 </div>
 
                                 <div class="space-y-2">
-                                    <label
-                                        class="block text-xs text-zinc-600"
-                                    >
+                                    <label class="block text-xs text-zinc-600">
                                         Teléfono
                                     </label>
                                     <input
@@ -474,9 +470,15 @@ export default {
                 html: `
                     <div class="text-left space-y-2 text-sm">
                         <p class="font-semibold text-gray-700">Por favor verifica tus datos:</p>
-                        <p><strong>Nombre:</strong> ${formData.firstName} ${formData.lastName}</p>
+                        <p><strong>Nombre:</strong> ${formData.firstName} ${
+                    formData.lastName
+                }</p>
                         <p><strong>Email:</strong> ${formData.email}</p>
-                        <p><strong>Ministerio:</strong> ${formData.ministry === 'Otro' ? formData.ministryOther : formData.ministry}</p>
+                        <p><strong>Ministerio:</strong> ${
+                            formData.ministry === "Otro"
+                                ? formData.ministryOther
+                                : formData.ministry
+                        }</p>
                     </div>
                 `,
                 icon: "question",

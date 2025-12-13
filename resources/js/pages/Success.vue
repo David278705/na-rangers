@@ -50,7 +50,8 @@
                     <!-- Welcome Message -->
                     <div class="mb-8 text-center">
                         <p class="text-xl text-zinc-900 font-semibold mb-3">
-                            Hola {{ registration.first_name }} {{ registration.last_name }}
+                            Hola {{ registration.first_name }}
+                            {{ registration.last_name }}
                         </p>
                         <p class="text-zinc-600">
                             Tu lugar en el retiro está asegurado. Hemos enviado
@@ -108,7 +109,7 @@
                         <p
                             class="font-mono text-2xl font-bold text-emerald-600 bg-white px-6 py-3 rounded-lg inline-block"
                         >
-                            HOREB-{{ String(registration.id).padStart(6, '0') }}
+                            HOREB-{{ String(registration.id).padStart(6, "0") }}
                         </p>
                         <p class="text-xs text-zinc-500 mt-3">
                             Presenta este código en el check-in
