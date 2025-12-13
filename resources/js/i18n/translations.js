@@ -9,7 +9,8 @@ export const translations = {
             description: 'Un encuentro transformador en las montañas de Colombia',
             registerButton: 'Registrarse Ahora',
             address: 'Kilómetro 5 Vía Villeta / La Vega — Restaurante Los Abuelos, Villeta Colombia',
-            followUs: 'Síguenos'
+            followUs: 'Síguenos',
+            designedBy: 'Diseñado y adaptado por EBON7'
         },
         
         // Registration Form
@@ -110,7 +111,8 @@ export const translations = {
             description: 'A transformative encounter in the mountains of Colombia',
             registerButton: 'Register Now',
             address: 'Kilometer 5 Villeta / La Vega Road — Los Abuelos Restaurant, Villeta Colombia',
-            followUs: 'Follow Us'
+            followUs: 'Follow Us',
+            designedBy: 'Designed and adapted by EBON7'
         },
         
         // Registration Form

@@ -130,6 +130,11 @@
                             </svg>
                             <span class="text-sm">{{ t.landing.followUs }} @na.rangers</span>
                         </div>
+                        
+                        <!-- Footer Credits -->
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <p class="text-xs text-white/50 text-center">{{ t.landing.designedBy }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
