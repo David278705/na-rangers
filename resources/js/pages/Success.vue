@@ -117,7 +117,7 @@
                     </div>
 
                     <!-- Download Voucher -->
-                    <div class="text-center mb-6">
+                    <!-- <div class="text-center mb-6">
                         <a
                             :href="`/api/registrations/${registration.id}/voucher`"
                             class="inline-flex items-center gap-3 bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-emerald-600 hover:scale-105"
@@ -138,7 +138,7 @@
                             </svg>
                             Descargar Comprobante PDF
                         </a>
-                    </div>
+                    </div> -->
 
                     <!-- Next Steps -->
                     <div class="border-t border-zinc-200 pt-6">

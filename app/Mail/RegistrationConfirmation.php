@@ -31,7 +31,8 @@ class RegistrationConfirmation extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Confirmación de Registro - HOREB 2026',
+            subject: 'Confirmación de Pre-Registro - HOREB 2026 Colombia',
+            cc: ['narangers@naglobal.org'],
         );
     }
 
