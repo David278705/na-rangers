@@ -30,8 +30,12 @@ class RegistrationConfirmation extends Mailable
      */
     public function envelope(): Envelope
     {
+        $subject = $this->registration->language === 'en' 
+            ? 'Pre-Registration Confirmation - HOREB 2026 Colombia'
+            : 'Confirmación de Pre-Registro - HOREB 2026 Colombia';
+
         return new Envelope(
-            subject: 'Confirmación de Pre-Registro - HOREB 2026 Colombia',
+            subject: $subject,
             cc: ['narangers@naglobal.org'],
         );
     }
@@ -41,8 +45,12 @@ class RegistrationConfirmation extends Mailable
      */
     public function content(): Content
     {
+        $view = $this->registration->language === 'en' 
+            ? 'emails.registration-confirmation-en'
+            : 'emails.registration-confirmation';
+
         return new Content(
-            view: 'emails.registration-confirmation',
+            view: $view,
             with: [
                 'registration' => $this->registration,
             ],

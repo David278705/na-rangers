@@ -18,13 +18,14 @@ class RegistrationController extends Controller
             'date_of_birth' => 'required|date|before:today',
             'document_id' => 'required|string|max:50',
             'place_of_origin' => 'required|string|max:255',
-            'ministry' => 'required|in:NA Canada,NA Colombia,NA USA,Otro',
-            'ministry_other' => 'nullable|required_if:ministry,Otro|string|max:255',
+            'ministry' => 'required|in:NA Canada,NA Colombia,NA USA,Otro,Other',
+            'ministry_other' => 'nullable|required_if:ministry,Otro,Other|string|max:255',
             'shirt_size' => 'required|in:S,M,L,XL,XXL',
             'medical_conditions' => 'nullable|string|max:1000',
             'allergies' => 'nullable|string|max:1000',
             'emergency_contact_name' => 'required|string|max:255',
             'emergency_contact_phone' => 'required|string|max:20',
+            'language' => 'required|in:es,en',
         ]);
 
         $registration = Registration::create($validated);

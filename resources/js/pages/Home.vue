@@ -1,5 +1,33 @@
 <template>
     <div class="min-h-screen">
+        <!-- Language Selector -->
+        <div class="fixed top-6 right-6 z-50">
+            <div class="bg-white/10 backdrop-blur-md rounded-lg p-1 flex gap-1 shadow-lg">
+                <button
+                    @click="changeLanguage('es')"
+                    :class="[
+                        'px-4 py-2 rounded-md text-sm font-medium transition-all',
+                        currentLang === 'es' 
+                            ? 'bg-emerald-500 text-white shadow-md' 
+                            : 'text-white/70 hover:text-white hover:bg-white/10'
+                    ]"
+                >
+                    ES
+                </button>
+                <button
+                    @click="changeLanguage('en')"
+                    :class="[
+                        'px-4 py-2 rounded-md text-sm font-medium transition-all',
+                        currentLang === 'en' 
+                            ? 'bg-emerald-500 text-white shadow-md' 
+                            : 'text-white/70 hover:text-white hover:bg-white/10'
+                    ]"
+                >
+                    EN
+                </button>
+            </div>
+        </div>
+
         <!-- Landing Section -->
         <section v-if="!showForm" class="min-h-screen relative">
             <!-- Background Image with Overlay -->
@@ -43,23 +71,22 @@
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                                 />
                             </svg>
-                            <span>Villeta, Colombia</span>
+                            <span>{{ t.landing.location }}</span>
                             <span class="text-emerald-500/50">•</span>
-                            <span>2 - 5 de Abril, 2026</span>
+                            <span>{{ t.landing.date }}</span>
                         </div>
 
                         <h1
                             class="text-6xl md:text-7xl font-bold text-white tracking-tight"
                         >
-                            Retiro de Hombres
+                            {{ t.landing.title }}
                             <span class="block text-emerald-400 mt-2"
-                                >HOREB 2026</span
+                                >{{ t.landing.subtitle }}</span
                             >
                         </h1>
 
                         <p class="text-xl text-white/90 max-w-2xl">
-                            Un encuentro transformador en las montañas de
-                            Colombia
+                            {{ t.landing.description }}
                         </p>
                     </div>
 
@@ -69,7 +96,7 @@
                             @click="showForm = true"
                             class="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-lg text-lg font-semibold transition-transform shadow-lg hover:scale-105"
                         >
-                            Registrarse Ahora
+                            {{ t.landing.registerButton }}
                             <svg
                                 class="w-5 h-5"
                                 fill="none"
@@ -89,8 +116,7 @@
                     <!-- Location -->
                     <div class="border-t border-white/20 pt-8">
                         <p class="text-sm text-white/70">
-                            Kilómetro 5 Vía Villeta / La Vega — Restaurante Los
-                            Abuelos, Villeta Colombia
+                            {{ t.landing.address }}
                         </p>
                         <div class="mt-3 flex items-center gap-2 text-white/60">
                             <svg
@@ -102,7 +128,7 @@
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                                 />
                             </svg>
-                            <span class="text-sm">@na.rangers</span>
+                            <span class="text-sm">{{ t.landing.followUs }} @na.rangers</span>
                         </div>
                     </div>
                 </div>
@@ -142,18 +168,17 @@
                             d="M10 19l-7-7m0 0l7-7m-7 7h18"
                         />
                     </svg>
-                    <span class="text-sm font-medium">Volver</span>
+                    <span class="text-sm font-medium">{{ t.form.backButton }}</span>
                 </button>
 
                 <!-- Form Card -->
                 <div class="bg-white rounded-xl p-8 md:p-12 shadow-2xl">
                     <div class="mb-10">
                         <h2 class="text-4xl font-bold text-zinc-900 mb-3">
-                            Registro
+                            {{ t.form.title }}
                         </h2>
                         <p class="text-zinc-600 text-lg">
-                            Completa tus datos para asegurar tu lugar en HOREB
-                            2026
+                            {{ t.form.subtitle }}
                         </p>
                     </div>
 
@@ -164,14 +189,14 @@
                                 <label
                                     class="block text-sm font-medium text-zinc-700"
                                 >
-                                    Nombre *
+                                    {{ t.form.firstName }} *
                                 </label>
                                 <input
                                     v-model="formData.firstName"
                                     type="text"
                                     required
                                     class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                    placeholder="Tu nombre"
+                                    :placeholder="t.form.firstName"
                                 />
                             </div>
 
@@ -179,14 +204,14 @@
                                 <label
                                     class="block text-sm font-medium text-zinc-700"
                                 >
-                                    Apellido *
+                                    {{ t.form.lastName }} *
                                 </label>
                                 <input
                                     v-model="formData.lastName"
                                     type="text"
                                     required
                                     class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                    placeholder="Tu apellido"
+                                    :placeholder="t.form.lastName"
                                 />
                             </div>
                         </div>
@@ -196,14 +221,14 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Correo Electrónico *
+                                {{ t.form.email }} *
                             </label>
                             <input
                                 v-model="formData.email"
                                 type="email"
                                 required
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                placeholder="tu@correo.com"
+                                :placeholder="t.form.email"
                             />
                         </div>
 
@@ -213,7 +238,7 @@
                                 <label
                                     class="block text-sm font-medium text-zinc-700"
                                 >
-                                    Fecha de Nacimiento *
+                                    {{ t.form.dateOfBirth }} *
                                 </label>
                                 <input
                                     v-model="formData.dateOfBirth"
@@ -227,14 +252,14 @@
                                 <label
                                     class="block text-sm font-medium text-zinc-700"
                                 >
-                                    Documento de Identidad *
+                                    {{ t.form.documentId }} *
                                 </label>
                                 <input
                                     v-model="formData.documentId"
                                     type="text"
                                     required
                                     class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                    placeholder="Cédula o Pasaporte"
+                                    :placeholder="t.form.documentId"
                                 />
                             </div>
                         </div>
@@ -244,14 +269,14 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Lugar de Origen o Residencia *
+                                {{ t.form.placeOfOrigin }} *
                             </label>
                             <input
                                 v-model="formData.placeOfOrigin"
                                 type="text"
                                 required
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                placeholder="Ciudad, País"
+                                :placeholder="t.form.placeOfOrigin"
                             />
                         </div>
 
@@ -260,7 +285,7 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Iglesia o Ministerio al que perteneces *
+                                {{ t.form.ministry }} *
                             </label>
                             <select
                                 v-model="formData.ministry"
@@ -268,31 +293,31 @@
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
                             >
                                 <option value="" disabled>
-                                    Selecciona una opción
+                                    {{ currentLang === 'es' ? 'Selecciona una opción' : 'Select an option' }}
                                 </option>
-                                <option value="NA Canada">NA Canada</option>
-                                <option value="NA Colombia">NA Colombia</option>
-                                <option value="NA USA">NA USA</option>
-                                <option value="Otro">Otro</option>
+                                <option value="NA Canada">{{ t.form.ministryOptions.naCanada }}</option>
+                                <option value="NA Colombia">{{ t.form.ministryOptions.naColombia }}</option>
+                                <option value="NA USA">{{ t.form.ministryOptions.naUsa }}</option>
+                                <option :value="currentLang === 'es' ? 'Otro' : 'Other'">{{ t.form.ministryOptions.other }}</option>
                             </select>
                         </div>
 
                         <!-- Otro Ministerio (condicional) -->
                         <div
-                            v-if="formData.ministry === 'Otro'"
+                            v-if="formData.ministry === 'Otro' || formData.ministry === 'Other'"
                             class="space-y-2"
                         >
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Especifica el Ministerio *
+                                {{ t.form.ministryOther }} *
                             </label>
                             <input
                                 v-model="formData.ministryOther"
                                 type="text"
                                 required
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                placeholder="Nombre del ministerio"
+                                :placeholder="t.form.ministryOther"
                             />
                         </div>
 
@@ -301,7 +326,7 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Talla para Camiseta de Ranger *
+                                {{ t.form.shirtSize }} *
                             </label>
                             <select
                                 v-model="formData.shirtSize"
@@ -309,13 +334,13 @@
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
                             >
                                 <option value="" disabled>
-                                    Selecciona tu talla
+                                    {{ currentLang === 'es' ? 'Selecciona tu talla' : 'Select your size' }}
                                 </option>
-                                <option value="S">S - Small</option>
-                                <option value="M">M - Medium</option>
-                                <option value="L">L - Large</option>
-                                <option value="XL">XL - Extra Large</option>
-                                <option value="XXL">XXL - 2X Large</option>
+                                <option value="S">{{ t.form.sizeOptions.s }} - Small</option>
+                                <option value="M">{{ t.form.sizeOptions.m }} - Medium</option>
+                                <option value="L">{{ t.form.sizeOptions.l }} - Large</option>
+                                <option value="XL">{{ t.form.sizeOptions.xl }} - Extra Large</option>
+                                <option value="XXL">{{ t.form.sizeOptions.xxl }} - 2X Large</option>
                             </select>
                         </div>
 
@@ -324,13 +349,13 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Condición Médica
+                                {{ t.form.medicalConditions }}
                             </label>
                             <textarea
                                 v-model="formData.medicalConditions"
                                 rows="2"
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                                placeholder="Menciona condiciones que debamos conocer (opcional)"
+                                :placeholder="t.form.medicalConditionsPlaceholder"
                             ></textarea>
                         </div>
 
@@ -339,13 +364,13 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Alergias
+                                {{ t.form.allergies }}
                             </label>
                             <textarea
                                 v-model="formData.allergies"
                                 rows="2"
                                 class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                                placeholder="Describe cualquier alergia (opcional)"
+                                :placeholder="t.form.allergiesPlaceholder"
                             ></textarea>
                         </div>
 
@@ -354,25 +379,25 @@
                             <label
                                 class="block text-sm font-medium text-zinc-700"
                             >
-                                Contacto de Emergencia *
+                                {{ t.form.emergencyContact }} *
                             </label>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="block text-xs text-zinc-600">
-                                        Nombre
+                                        {{ t.form.emergencyContactName }}
                                     </label>
                                     <input
                                         v-model="formData.emergencyContactName"
                                         type="text"
                                         required
                                         class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                                        placeholder="Nombre completo"
+                                        :placeholder="t.form.emergencyContactName"
                                     />
                                 </div>
 
                                 <div class="space-y-2">
                                     <label class="block text-xs text-zinc-600">
-                                        Teléfono
+                                        {{ t.form.emergencyContactPhone }}
                                     </label>
                                     <input
                                         v-model="formData.emergencyContactPhone"
@@ -421,14 +446,14 @@
                                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                         ></path>
                                     </svg>
-                                    Procesando...
+                                    {{ t.success.registering }}
                                 </span>
-                                <span v-else>Registrarse</span>
+                                <span v-else>{{ t.form.submitButton }}</span>
                             </button>
                         </div>
 
                         <p class="text-center text-zinc-500 text-xs">
-                            Los campos marcados con * son obligatorios
+                            {{ currentLang === 'es' ? 'Los campos marcados con * son obligatorios' : 'Fields marked with * are required' }}
                         </p>
                     </form>
                 </div>
@@ -440,10 +465,12 @@
 <script>
 import { ref, reactive } from "vue";
 import axios from "axios";
+import { useI18n } from "../composables/useI18n.js";
 
 export default {
     name: "Home",
     setup() {
+        const { t, currentLang, changeLanguage } = useI18n();
         const showForm = ref(false);
         const loading = ref(false);
 
@@ -466,16 +493,16 @@ export default {
         const handleSubmit = async () => {
             // Mostrar confirmación con SweetAlert
             const result = await Swal.fire({
-                title: "¿Confirmar Registro?",
+                title: t.value.confirmation.title,
                 html: `
                     <div class="text-left space-y-2 text-sm">
-                        <p class="font-semibold text-gray-700">Por favor verifica tus datos:</p>
-                        <p><strong>Nombre:</strong> ${formData.firstName} ${
+                        <p class="font-semibold text-gray-700">${t.value.confirmation.message}</p>
+                        <p><strong>${t.value.confirmation.name}:</strong> ${formData.firstName} ${
                     formData.lastName
                 }</p>
-                        <p><strong>Email:</strong> ${formData.email}</p>
-                        <p><strong>Ministerio:</strong> ${
-                            formData.ministry === "Otro"
+                        <p><strong>${t.value.confirmation.email}:</strong> ${formData.email}</p>
+                        <p><strong>${t.value.confirmation.ministry}:</strong> ${
+                            formData.ministry === "Otro" || formData.ministry === "Other"
                                 ? formData.ministryOther
                                 : formData.ministry
                         }</p>
@@ -485,8 +512,8 @@ export default {
                 showCancelButton: true,
                 confirmButtonColor: "#10b981",
                 cancelButtonColor: "#6b7280",
-                confirmButtonText: "Sí, confirmar registro",
-                cancelButtonText: "Revisar datos",
+                confirmButtonText: t.value.confirmation.confirmButton,
+                cancelButtonText: t.value.confirmation.cancelButton,
                 width: "500px",
             });
 
@@ -507,7 +534,7 @@ export default {
                     place_of_origin: formData.placeOfOrigin,
                     ministry: formData.ministry,
                     ministry_other:
-                        formData.ministry === "Otro"
+                        formData.ministry === "Otro" || formData.ministry === "Other"
                             ? formData.ministryOther
                             : null,
                     shirt_size: formData.shirtSize,
@@ -515,6 +542,7 @@ export default {
                     allergies: formData.allergies || null,
                     emergency_contact_name: formData.emergencyContactName,
                     emergency_contact_phone: formData.emergencyContactPhone,
+                    language: currentLang.value,
                 });
 
                 const { registration } = response.data;
@@ -522,20 +550,21 @@ export default {
                 // Mostrar éxito
                 Swal.fire({
                     icon: "success",
-                    title: "¡Registro Exitoso!",
+                    title: t.value.success.title,
                     html: `
-                        <p class="text-lg mb-2">Tu registro ha sido completado.</p>
-                        <p class="text-sm text-gray-600">Recibirás un correo con tu comprobante.</p>
+                        <p class="text-lg mb-2">${t.value.success.message}</p>
                     `,
                     confirmButtonColor: "#10b981",
-                    confirmButtonText: "Ver Comprobante",
+                    confirmButtonText: "OK",
                 }).then(() => {
                     window.location.href = `/#/success?registration=${registration.id}`;
                 });
             } catch (error) {
                 console.error("Error creating registration:", error);
 
-                let errorMessage = "Ocurrió un error procesando tu registro.";
+                let errorMessage = currentLang.value === 'es' 
+                    ? "Ocurrió un error procesando tu registro." 
+                    : "An error occurred processing your registration.";
 
                 if (error.response?.data?.message) {
                     errorMessage = error.response.data.message;
@@ -548,7 +577,7 @@ export default {
 
                 Swal.fire({
                     icon: "error",
-                    title: "Error en el Registro",
+                    title: currentLang.value === 'es' ? "Error en el Registro" : "Registration Error",
                     html: errorMessage,
                     confirmButtonColor: "#ef4444",
                 });
@@ -557,19 +586,14 @@ export default {
             }
         };
 
-        const selectPromoPrice = () => {
-            selectedPrice.value = 80000000;
-        };
-
-        const selectRegularPrice = () => {
-            selectedPrice.value = 100000000;
-        };
-
         return {
             showForm,
             loading,
             formData,
             handleSubmit,
+            t,
+            currentLang,
+            changeLanguage,
         };
     },
 };
