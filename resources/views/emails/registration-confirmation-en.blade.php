@@ -258,6 +258,11 @@
                     <p style="margin: 0; color: #065f46; font-weight: 600; font-size: 15px;">✅ Secure your special rate of $800,000 COP by paying before February 15th!</p>
                 </div>
                 
+                <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
+                    <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">💵 You can reserve your spot with just $200,000 COP!</p>
+                    <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Make a deposit of $200,000 COP to reserve your place and complete the remaining balance before the event.</p>
+                </div>
+                
                 <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Important:</strong> The applicable rate will be the one in effect on the date your payment is received, not the date of your pre-registration.</p>
                 <p style="color: #065f46; font-size: 13px;"><strong>Don't miss this deadline to secure your rate and your spot at Horeb Camp 2026!</strong></p>
             </div>

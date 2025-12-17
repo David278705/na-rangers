@@ -88,6 +88,16 @@
                         <p class="text-xl text-white/90 max-w-2xl">
                             {{ t.landing.description }}
                         </p>
+
+                        <!-- Price Info -->
+                        <div class="bg-amber-500/20 border-2 border-amber-400 rounded-lg p-4 max-w-2xl backdrop-blur-sm">
+                            <p class="text-lg font-semibold text-amber-100 mb-1">
+                                {{ t.landing.priceInfo }}
+                            </p>
+                            <p class="text-sm text-amber-200/90">
+                                {{ t.landing.priceDetails }}
+                            </p>
+                        </div>
                     </div>
 
                     <!-- CTA -->
