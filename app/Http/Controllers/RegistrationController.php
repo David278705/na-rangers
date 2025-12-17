@@ -49,32 +49,63 @@ class RegistrationController extends Controller
     {
         $registrations = Registration::orderBy('created_at', 'desc')->get();
 
-        $csv = "ID,Nombre,Apellido,Email,Fecha de Nacimiento,Documento,Lugar de Origen,Ministerio,Ministerio (Otro),Talla,Condiciones Médicas,Alergias,Contacto de Emergencia,Teléfono de Emergencia,Idioma,Fecha de Registro\n";
+        // BOM for Excel UTF-8 support
+        $csv = "\xEF\xBB\xBF";
+        
+        // Headers
+        $headers = [
+            'ID',
+            'Nombre',
+            'Apellido',
+            'Email',
+            'Fecha de Nacimiento',
+            'Documento',
+            'Lugar de Origen',
+            'Ministerio',
+            'Ministerio (Otro)',
+            'Talla',
+            'Condiciones Médicas',
+            'Alergias',
+            'Contacto de Emergencia',
+            'Teléfono de Emergencia',
+            'Idioma',
+            'Fecha de Registro'
+        ];
+        
+        $csv .= implode(',', $headers) . "\r\n";
 
         foreach ($registrations as $reg) {
-            $csv .= implode(',', [
+            $row = [
                 $reg->id,
-                '"' . str_replace('"', '""', $reg->first_name) . '"',
-                '"' . str_replace('"', '""', $reg->last_name) . '"',
-                '"' . str_replace('"', '""', $reg->email) . '"',
-                $reg->date_of_birth,
-                '"' . str_replace('"', '""', $reg->document_id) . '"',
-                '"' . str_replace('"', '""', $reg->place_of_origin) . '"',
-                '"' . str_replace('"', '""', $reg->ministry) . '"',
-                '"' . str_replace('"', '""', $reg->ministry_other ?? '') . '"',
+                $this->escapeCsv($reg->first_name),
+                $this->escapeCsv($reg->last_name),
+                $this->escapeCsv($reg->email),
+                \Carbon\Carbon::parse($reg->date_of_birth)->format('d/m/Y'),
+                $this->escapeCsv($reg->document_id),
+                $this->escapeCsv($reg->place_of_origin),
+                $this->escapeCsv($reg->ministry),
+                $this->escapeCsv($reg->ministry_other ?? ''),
                 $reg->shirt_size,
-                '"' . str_replace('"', '""', $reg->medical_conditions ?? '') . '"',
-                '"' . str_replace('"', '""', $reg->allergies ?? '') . '"',
-                '"' . str_replace('"', '""', $reg->emergency_contact_name) . '"',
-                '"' . str_replace('"', '""', $reg->emergency_contact_phone) . '"',
-                $reg->language,
-                $reg->created_at->format('Y-m-d H:i:s'),
-            ]) . "\n";
+                $this->escapeCsv($reg->medical_conditions ?? ''),
+                $this->escapeCsv($reg->allergies ?? ''),
+                $this->escapeCsv($reg->emergency_contact_name),
+                $this->escapeCsv($reg->emergency_contact_phone),
+                strtoupper($reg->language),
+                $reg->created_at->format('d/m/Y H:i:s'),
+            ];
+            
+            $csv .= implode(',', $row) . "\r\n";
         }
 
         return response($csv)
-            ->header('Content-Type', 'text/csv')
+            ->header('Content-Type', 'text/csv; charset=UTF-8')
             ->header('Content-Disposition', 'attachment; filename="registros-horeb-2026.csv"');
+    }
+
+    private function escapeCsv($value)
+    {
+        $value = str_replace('"', '""', $value);
+        return '"' . $value . '"';
     }
 
     public function store(Request $request)

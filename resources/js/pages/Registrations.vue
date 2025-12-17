@@ -244,7 +244,7 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-white/50 text-xs uppercase tracking-wider mb-1">Fecha de Nacimiento</label>
-                            <p class="text-white">{{ selectedRegistration.date_of_birth }}</p>
+                            <p class="text-white">{{ formatBirthDate(selectedRegistration.date_of_birth) }}</p>
                         </div>
                         <div>
                             <label class="block text-white/50 text-xs uppercase tracking-wider mb-1">Documento</label>
@@ -402,6 +402,14 @@ export default {
             });
         };
 
+        const formatBirthDate = (dateString) => {
+            const date = new Date(dateString);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        };
+
         const exportToExcel = () => {
             window.open('/api/registrations/export/excel', '_blank');
         };
@@ -425,6 +433,7 @@ export default {
             goToPage,
             viewDetails,
             formatDate,
+            formatBirthDate,
             exportToExcel,
         };
     },
