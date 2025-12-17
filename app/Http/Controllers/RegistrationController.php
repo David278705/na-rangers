@@ -52,7 +52,7 @@ class RegistrationController extends Controller
         // BOM for Excel UTF-8 support
         $csv = "\xEF\xBB\xBF";
         
-        // Headers
+        // Headers - usar punto y coma para Excel en español
         $headers = [
             'ID',
             'Nombre',
@@ -72,7 +72,7 @@ class RegistrationController extends Controller
             'Fecha de Registro'
         ];
         
-        $csv .= implode(',', $headers) . "\r\n";
+        $csv .= implode(';', $headers) . "\r\n";
 
         foreach ($registrations as $reg) {
             $row = [
@@ -94,7 +94,7 @@ class RegistrationController extends Controller
                 $reg->created_at->format('d/m/Y H:i:s'),
             ];
             
-            $csv .= implode(',', $row) . "\r\n";
+            $csv .= implode(';', $row) . "\r\n";
         }
 
         return response($csv)
