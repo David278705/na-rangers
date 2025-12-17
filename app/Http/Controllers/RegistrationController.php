@@ -9,6 +9,74 @@ use Illuminate\Support\Facades\Mail;
 
 class RegistrationController extends Controller
 {
+    public function index(Request $request)
+    {
+        $query = Registration::query();
+
+        // Search functionality
+        if ($request->has('search')) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                  ->orWhere('last_name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('document_id', 'like', "%{$search}%")
+                  ->orWhere('ministry', 'like', "%{$search}%");
+            });
+        }
+
+        // Filter by ministry
+        if ($request->has('ministry') && $request->ministry !== 'all') {
+            $query->where('ministry', $request->ministry);
+        }
+
+        // Filter by language
+        if ($request->has('language') && $request->language !== 'all') {
+            $query->where('language', $request->language);
+        }
+
+        // Sort
+        $sortField = $request->get('sort_field', 'created_at');
+        $sortDirection = $request->get('sort_direction', 'desc');
+        $query->orderBy($sortField, $sortDirection);
+
+        $registrations = $query->paginate($request->get('per_page', 15));
+
+        return response()->json($registrations);
+    }
+
+    public function exportExcel()
+    {
+        $registrations = Registration::orderBy('created_at', 'desc')->get();
+
+        $csv = "ID,Nombre,Apellido,Email,Fecha de Nacimiento,Documento,Lugar de Origen,Ministerio,Ministerio (Otro),Talla,Condiciones Médicas,Alergias,Contacto de Emergencia,Teléfono de Emergencia,Idioma,Fecha de Registro\n";
+
+        foreach ($registrations as $reg) {
+            $csv .= implode(',', [
+                $reg->id,
+                '"' . str_replace('"', '""', $reg->first_name) . '"',
+                '"' . str_replace('"', '""', $reg->last_name) . '"',
+                '"' . str_replace('"', '""', $reg->email) . '"',
+                $reg->date_of_birth,
+                '"' . str_replace('"', '""', $reg->document_id) . '"',
+                '"' . str_replace('"', '""', $reg->place_of_origin) . '"',
+                '"' . str_replace('"', '""', $reg->ministry) . '"',
+                '"' . str_replace('"', '""', $reg->ministry_other ?? '') . '"',
+                $reg->shirt_size,
+                '"' . str_replace('"', '""', $reg->medical_conditions ?? '') . '"',
+                '"' . str_replace('"', '""', $reg->allergies ?? '') . '"',
+                '"' . str_replace('"', '""', $reg->emergency_contact_name) . '"',
+                '"' . str_replace('"', '""', $reg->emergency_contact_phone) . '"',
+                $reg->language,
+                $reg->created_at->format('Y-m-d H:i:s'),
+            ]) . "\n";
+        }
+
+        return response($csv)
+            ->header('Content-Type', 'text/csv')
+            ->header('Content-Disposition', 'attachment; filename="registros-horeb-2026.csv"');
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([

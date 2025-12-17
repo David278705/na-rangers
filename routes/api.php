@@ -16,6 +16,8 @@ Route::get('/test', function () {
 
 // Registration routes
 Route::post('/registrations', [RegistrationController::class, 'store']);
+Route::get('/registrations', [RegistrationController::class, 'index']);
+Route::get('/registrations/export/excel', [RegistrationController::class, 'exportExcel']);
 Route::get('/registrations/{id}', [RegistrationController::class, 'show']);
 Route::get('/registrations/{id}/voucher', [RegistrationController::class, 'downloadVoucher']);
 
