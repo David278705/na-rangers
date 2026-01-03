@@ -206,7 +206,7 @@
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Account Number:</span>
-                        <span class="detail-value"><strong style="font-size: 18px; color: #059669;">853 000000 262</strong></span>
+                        <span class="detail-value"><strong style="font-size: 18px; color: #059669;">853 00000 262</strong></span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Beneficiary:</span>
