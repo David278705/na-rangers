@@ -8,7 +8,9 @@
                 <div
                     class="inline-block animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-emerald-400"
                 ></div>
-                <p class="mt-4 text-white text-lg">{{ t.successPage.loading }}</p>
+                <p class="mt-4 text-white text-lg">
+                    {{ t.successPage.loading }}
+                </p>
             </div>
 
             <!-- Success Content -->
@@ -50,23 +52,43 @@
                     <!-- Welcome Message -->
                     <div class="mb-8 text-center">
                         <p class="text-xl text-zinc-900 font-semibold mb-3">
-                            {{ t.successPage.greeting }} {{ registration.first_name }}
+                            {{ t.successPage.greeting }}
+                            {{ registration.first_name }}
                             {{ registration.last_name }}
                         </p>
                         <p class="text-zinc-600">
-                            {{ t.successPage.message.replace('{email}', registration.email) }}
+                            {{
+                                t.successPage.message.replace(
+                                    "{email}",
+                                    registration.email,
+                                )
+                            }}
                         </p>
                     </div>
 
                     <!-- Important Warning -->
-                    <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-6 mb-6">
+                    <div
+                        class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-6 mb-6"
+                    >
                         <div class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            <svg
+                                class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd"
+                                ></path>
                             </svg>
                             <div>
-                                <h4 class="font-bold text-amber-900 mb-2">{{ t.successPage.important }}</h4>
-                                <p class="text-amber-800 text-sm">{{ t.successPage.importantMessage }}</p>
+                                <h4 class="font-bold text-amber-900 mb-2">
+                                    {{ t.successPage.important }}
+                                </h4>
+                                <p class="text-amber-800 text-sm">
+                                    {{ t.successPage.importantMessage }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -95,10 +117,15 @@
                         </h3>
                         <div class="space-y-2 text-zinc-700">
                             <p>
-                                <span class="font-semibold">{{ t.successPage.date }}:</span> {{ t.successPage.dateValue }}
+                                <span class="font-semibold"
+                                    >{{ t.successPage.date }}:</span
+                                >
+                                {{ t.successPage.dateValue }}
                             </p>
                             <p>
-                                <span class="font-semibold">{{ t.successPage.location }}:</span>
+                                <span class="font-semibold"
+                                    >{{ t.successPage.location }}:</span
+                                >
                                 {{ t.successPage.locationValue }}
                             </p>
                             <p class="text-sm text-zinc-600">
@@ -147,6 +174,71 @@
                             Descargar Comprobante PDF
                         </a>
                     </div> -->
+
+                    <!-- Payment Section -->
+                    <div
+                        class="bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-300 rounded-lg p-6 mb-6"
+                    >
+                        <h3
+                            class="font-bold text-zinc-900 mb-4 text-center text-lg flex items-center justify-center gap-2"
+                        >
+                            <svg
+                                class="w-6 h-6 text-emerald-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                                ></path>
+                            </svg>
+                            💳 {{ t.successPage.paymentInstructions }}
+                        </h3>
+
+                        <!-- Payment Button -->
+                        <div class="text-center mb-4">
+                            <a
+                                :href="t.successPage.paymentLinkUrl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-3 bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:bg-emerald-700 hover:scale-105 shadow-lg"
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                                    ></path>
+                                </svg>
+                                {{ t.successPage.paymentLink }}
+                            </a>
+                        </div>
+
+                        <!-- QR Code Section -->
+                        <div class="text-center">
+                            <p class="text-sm text-zinc-700 font-semibold mb-3">
+                                {{ t.successPage.paymentQRTitle }}
+                            </p>
+                            <div
+                                class="inline-block bg-white p-4 rounded-lg shadow-md"
+                            >
+                                <img
+                                    src="/public/img/qr.png"
+                                    alt="QR Code"
+                                    class="w-48 h-48 mx-auto"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Next Steps -->
                     <div class="border-t border-zinc-200 pt-6">
@@ -272,10 +364,18 @@
                     </svg>
                 </div>
                 <h2 class="text-2xl font-bold text-zinc-900 mb-2">
-                    {{ currentLang === 'es' ? 'Registro no encontrado' : 'Registration not found' }}
+                    {{
+                        currentLang === "es"
+                            ? "Registro no encontrado"
+                            : "Registration not found"
+                    }}
                 </h2>
                 <p class="text-zinc-600 mb-6">
-                    {{ currentLang === 'es' ? 'No pudimos cargar la información de tu registro.' : 'We could not load your registration information.' }}
+                    {{
+                        currentLang === "es"
+                            ? "No pudimos cargar la información de tu registro."
+                            : "We could not load your registration information."
+                    }}
                 </p>
                 <router-link
                     to="/"
@@ -300,8 +400,8 @@ export default {
         const route = useRoute();
         const loading = ref(true);
         const registration = ref(null);
-        const currentLang = ref(localStorage.getItem('language') || 'es');
-        
+        const currentLang = ref(localStorage.getItem("language") || "es");
+
         const t = computed(() => translations[currentLang.value]);
 
         onMounted(async () => {
@@ -314,10 +414,10 @@ export default {
 
             try {
                 const response = await axios.get(
-                    `/api/registrations/${registrationId}`
+                    `/api/registrations/${registrationId}`,
                 );
                 registration.value = response.data.registration;
-                
+
                 // Set language from registration if available
                 if (registration.value.language) {
                     currentLang.value = registration.value.language;
@@ -333,7 +433,7 @@ export default {
             loading,
             registration,
             currentLang,
-            t
+            t,
         };
     },
 };

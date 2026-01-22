@@ -192,29 +192,18 @@
 
             <!-- Payment Instructions -->
             <div class="event-details">
-                <h3>💰 1. Payment Confirmation</h3>
-                <p style="margin-bottom: 15px; color: #475569;">Make your deposit/transfer to the following Bancolombia account:</p>
+                <h3>💰 1. Make Your Payment</h3>
+                <p style="margin-bottom: 15px; color: #475569;">To confirm your registration, make your payment through our online payment system:</p>
                 
-                <div style="background: #ffffff; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 15px 0;">
-                    <div class="detail-row">
-                        <span class="detail-label">Bank:</span>
-                        <span class="detail-value"><strong>Bancolombia</strong></span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Account Type:</span>
-                        <span class="detail-value"><strong>Savings Account</strong></span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Account Number:</span>
-                        <span class="detail-value"><strong style="font-size: 18px; color: #059669;">853 00000 262</strong></span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Beneficiary:</span>
-                        <span class="detail-value"><strong>Nuevo Amanecer Pereira</strong></span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label">Tax ID (NIT):</span>
-                        <span class="detail-value"><strong>901356691-6</strong></span>
+                <div style="background: #ffffff; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 15px 0; text-align: center;">
+                    <p style="color: #475569; margin-bottom: 15px; font-weight: 600;">Click the button below to go to the payment portal:</p>
+                    <a href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=13875&searchedCategoryId=&searchedAgreementName=IGLESIA%20CRISTIANA%20NUEVO%20AMANECER" 
+                       style="display: inline-block; background: #059669; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 700; font-size: 16px; margin: 10px 0;" 
+                       target="_blank">💳 PAY NOW</a>
+                    
+                    <div style="margin: 20px 0; padding: 15px; background: #f0fdf4; border-radius: 6px;">
+                        <p style="color: #065f46; font-size: 14px; margin-bottom: 10px;"><strong>Or scan this QR code:</strong></p>
+                        <img src="{{ $message->embed(public_path('img/qr.png')) }}" alt="QR Code for payment" style="max-width: 200px; margin: 10px auto; display: block;" />
                     </div>
                 </div>
             </div>

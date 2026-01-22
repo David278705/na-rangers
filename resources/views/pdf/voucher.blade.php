@@ -285,6 +285,32 @@
             </p>
         </div>
 
+        <!-- Payment Instructions Section -->
+        <div class="section">
+            <div class="section-title">💳 Instrucciones de Pago</div>
+            <div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 15px 0;">
+                <p style="color: #065f46; margin-bottom: 15px; font-weight: 600;">Para completar tu registro, realiza el pago escaneando este código QR:</p>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="{{ public_path('img/qr.png') }}" alt="Código QR para pago" style="max-width: 200px; margin: 0 auto; display: block; border: 2px solid #10b981; border-radius: 8px; padding: 10px; background: #ffffff;" />
+                </div>
+                
+                <p style="color: #065f46; margin-top: 15px; font-size: 13px; text-align: center;"><strong>O visita:</strong></p>
+                <p style="color: #059669; margin-top: 5px; font-size: 11px; text-align: center; word-break: break-all;">
+                    https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=13875
+                </p>
+                
+                <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 20px;">
+                    <p style="margin: 0; color: #065f46; font-size: 13px; text-align: center;"><strong>💵 Aparta tu cupo con $200.000 COP</strong></p>
+                    <p style="margin: 5px 0 0 0; color: #065f46; font-size: 12px; text-align: center;">Tarifa completa: $800.000 hasta el 15 de febrero | $1.000.000 del 16 en adelante</p>
+                </div>
+                
+                <p style="color: #78350f; margin-top: 20px; font-size: 12px; background: #fef3c7; padding: 12px; border-radius: 6px;">
+                    <strong>📸 Importante:</strong> Una vez realizado el pago, envía el comprobante a <strong>narangers@naglobal.org</strong> o WhatsApp <strong>321 6467232</strong>
+                </p>
+            </div>
+        </div>
+
         <!-- Event Info -->
         <div class="location">
             <strong>Info del Evento:</strong><br>
