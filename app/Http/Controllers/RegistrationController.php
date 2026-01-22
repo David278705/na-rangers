@@ -132,8 +132,14 @@ class RegistrationController extends Controller
         // Send confirmation email
         try {
             Mail::to($registration->email)->send(new RegistrationConfirmation($registration));
+            \Illuminate\Support\Facades\Log::info("Email sent successfully to: " . $registration->email);
         } catch (\Exception $e) {
             \Illuminate\Support\Facades\Log::error("Failed to send confirmation email: " . $e->getMessage());
+            \Illuminate\Support\Facades\Log::error("Stack trace: " . $e->getTraceAsString());
+            // Lanzar el error para verlo en desarrollo
+            if (config('app.debug')) {
+                throw $e;
+            }
         }
 
         return response()->json([
