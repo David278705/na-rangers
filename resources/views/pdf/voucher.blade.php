@@ -301,7 +301,10 @@
                 </div>
                 
                 <p style="color: #78350f; margin-top: 20px; font-size: 12px; background: #fef3c7; padding: 12px; border-radius: 6px;">
-                    <strong>📸 Importante:</strong> Una vez realizado el pago, envía el comprobante a <strong>narangers@naglobal.org</strong> o WhatsApp <strong>321 6467232</strong>
+                    <strong>📸 Importante:</strong> Una vez realizado el pago, envía el comprobante a <strong>narangers@naglobal.org</strong> o WhatsApp:<br>
+                    <strong>💵 Pagos:</strong> Carolina Mejia: +57 (310) 442-3888<br>
+                    <strong>🇨🇴 Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289<br>
+                    <strong>🌎 Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708
                 </p>
             </div>
         </div>

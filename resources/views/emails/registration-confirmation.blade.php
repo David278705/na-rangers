@@ -211,11 +211,16 @@
             <!-- Send Proof Instructions -->
             <div class="event-details" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
                 <h3>📸 2. Envío del Comprobante</h3>
-                <p style="color: #78350f; margin-bottom: 10px;">Una vez realizado el pago, por favor, <strong>envía un pantallazo o foto del comprobante de pago</strong> al siguiente correo electrónico:</p>
+                <p style="color: #78350f; margin-bottom: 10px;">Una vez realizado el pago, por favor, <strong>envía un pantallazo o foto del comprobante de pago</strong> a:</p>
                 <div style="text-align: center; margin: 15px 0;">
                     <a href="mailto:narangers@naglobal.org" style="display: inline-block; background: #059669; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600;">narangers@naglobal.org</a>
                 </div>
-                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">📱 También puedes reportar tu pago vía WhatsApp al: <strong>321 6467232</strong></p>
+                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">📱 O por WhatsApp:</p>
+                <div style="color: #065f46; font-size: 13px; line-height: 1.8; margin: 10px 0;">
+                    <p><strong>💵 Pagos:</strong> Carolina Mejia: +57 (310) 442-3888</p>
+                    <p><strong>🇨🇴 Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289</p>
+                    <p><strong>🌎 Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708</p>
+                </div>
                 <p style="color: #78350f; font-size: 12px; margin-top: 10px; font-style: italic;">Este paso es crucial, ya que nos permite identificarte y completar tu registro formalmente.</p>
             </div>
 

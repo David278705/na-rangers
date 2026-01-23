@@ -211,11 +211,16 @@
             <!-- Send Proof Instructions -->
             <div class="event-details" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
                 <h3>📸 2. Submit Payment Receipt</h3>
-                <p style="color: #78350f; margin-bottom: 10px;">Once you've made the payment, please <strong>send a screenshot or photo of the payment receipt</strong> to the following email address:</p>
+                <p style="color: #78350f; margin-bottom: 10px;">Once you've made the payment, please <strong>send a screenshot or photo of the payment receipt</strong> to:</p>
                 <div style="text-align: center; margin: 15px 0;">
                     <a href="mailto:narangers@naglobal.org" style="display: inline-block; background: #059669; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600;">narangers@naglobal.org</a>
                 </div>
-                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">📱 You can also report your payment via WhatsApp at: <strong>+57 321 6467232</strong></p>
+                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">📱 Or via WhatsApp:</p>
+                <div style="color: #065f46; font-size: 13px; line-height: 1.8; margin: 10px 0;">
+                    <p><strong>💵 Payments:</strong> Carolina Mejia: +57 (310) 442-3888</p>
+                    <p><strong>🇨🇴 Colombia Info:</strong> Ismael Marin: +57 (300) 212-9289</p>
+                    <p><strong>🌎 International Info:</strong> Jan Paol Mendez: +1 (647) 701-6708</p>
+                </div>
                 <p style="color: #78350f; font-size: 12px; margin-top: 10px; font-style: italic;">This step is crucial, as it allows us to identify you and complete your registration formally.</p>
             </div>
 
