@@ -31,7 +31,7 @@
         <!-- Landing Section -->
         <section v-if="!showForm" class="min-h-screen relative">
             <!-- Background Image with Overlay -->
-            <div class="absolute inset-0 z-0">
+            <div class="fixed inset-0 z-0 h-screen">
                 <img
                     src="/public/img/wallpaper.jpg"
                     alt="HOREB Colombia 2026"
@@ -121,6 +121,37 @@
                                 />
                             </svg>
                         </button>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="border-t border-white/20 pt-12 mt-12">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-white mb-2">{{ t.faq.title }}</h2>
+                            <p class="text-white/70">{{ t.faq.subtitle }}</p>
+                        </div>
+                        
+                        <div class="space-y-4 max-w-3xl">
+                            <details 
+                                v-for="(item, index) in t.faq.questions" 
+                                :key="index"
+                                class="faq-item group rounded-lg border border-white/20 overflow-hidden"
+                            >
+                                <summary class="cursor-pointer px-6 py-4 font-semibold text-white flex justify-between items-center bg-white/10 backdrop-blur-md hover:bg-white/15 transition-colors">
+                                    <span>{{ item.q }}</span>
+                                    <svg 
+                                        class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" 
+                                        fill="none" 
+                                        stroke="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+                                <div class="faq-content">
+                                    <div class="px-6 py-4 text-white/90 bg-white/5 text-sm leading-relaxed" v-html="formatAnswer(item.a)"></div>
+                                </div>
+                            </details>
+                        </div>
                     </div>
 
                     <!-- Location -->
@@ -601,11 +632,30 @@ export default {
             }
         };
 
+        const formatAnswer = (text) => {
+            if (!text) return '';
+            
+            // Convertir URLs en enlaces clickeables
+            let formatted = text.replace(
+                /(https?:\/\/[^\s]+)/g,
+                '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:text-emerald-200 underline">$1</a>'
+            );
+            
+            // Convertir números de teléfono en enlaces tel:
+            formatted = formatted.replace(
+                /(\+\d{1,3}\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{4})/g,
+                '<a href="tel:$1" class="text-emerald-300 hover:text-emerald-200 underline">$1</a>'
+            );
+            
+            return formatted;
+        };
+
         return {
             showForm,
             loading,
             formData,
             handleSubmit,
+            formatAnswer,
             t,
             currentLang,
             changeLanguage,
@@ -613,3 +663,30 @@ export default {
     },
 };
 </script>
+<style scoped>
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item summary {
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.faq-item[open] .faq-content {
+    grid-template-rows: 1fr;
+}
+
+.faq-content > div {
+    overflow: hidden;
+}
+</style>

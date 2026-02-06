@@ -113,6 +113,89 @@ export const translations = {
         email: {
             subject: "Confirmación de Pre-Registro - HOREB 2026 Colombia",
         },
+
+        // FAQ Section
+        faq: {
+            title: "Preguntas Frecuentes",
+            subtitle: "Todo lo que necesitas saber sobre HOREB 2026",
+            questions: [
+                {
+                    q: "¿Qué es el campamento Rangers?",
+                    a: "Es un tiempo separado en el que buscamos que un hombre logre: Descubrir su IDENTIDAD, Caminar diariamente en su PROPÓSITO, y Dejar un LEGADO en su generación y para las próximas. Este evento exalta el diseño de Dios en el hombre y le afirma para luchar y conquistar cada área de su vida, convirtiéndose en un líder Espiritual, de su Familia, en Sanidad, en Finanzas y en la Comunidad."
+                },
+                {
+                    q: "¿Cuál es el horario del Campamento NA Rangers 'Horeb'?",
+                    a: "Del 2 al 5 de Abril. Llegada: 2 de Abril a las 8:00 am. Final: 5 de Abril a las 6:00 pm."
+                },
+                {
+                    q: "¿Cuál es el punto de encuentro?",
+                    a: "Kilómetro 5 Vía Villeta / La Vega — Restaurante Los Abuelos, Villeta Colombia. Para viajeros internacionales: 1 hora 40 min desde la salida de Bogotá. Aeropuerto más cercano: Aeropuerto Internacional El Dorado de Bogotá."
+                },
+                {
+                    q: "¿Cuál es el costo?",
+                    a: "$800.000 COP para inscritos hasta el 15 de Febrero ($290 CAD). $1'000.000 COP desde el 16 de Febrero hasta el 15 de Marzo ($350 CAD)."
+                },
+                {
+                    q: "¿Cuál es el valor del depósito?",
+                    a: "$200.000 COP / $75 CAD (no reembolsables)."
+                },
+                {
+                    q: "¿Cuándo es la fecha límite de pago total?",
+                    a: "15 de Febrero para aplicar al descuento ($800.000 COP). 15 de Marzo para pagar precio completo ($1'000.000 COP)."
+                },
+                {
+                    q: "¿Qué incluye el valor total del campamento?",
+                    a: "Alimentos, ración militar, permisos para acampar, detalles logísticos, materiales de equipos (pelotones), etc. NO incluye el desayuno del primer día, ni la cena del último día."
+                },
+                {
+                    q: "¿Qué pasa si no tengo un buen estado físico?",
+                    a: "No permitas que ninguna limitación te impida participar y ver lo que Dios tiene para ti."
+                },
+                {
+                    q: "¿Qué pasa si tengo alguna restricción alimenticia?",
+                    a: "Debes informar al momento de la inscripción y en el registro el día del campamento."
+                },
+                {
+                    q: "¿Hay algún descuento si voy con otros miembros de mi familia?",
+                    a: "No, los precios del campamento cubren los costos fijos. Por esta razón no se permiten descuentos excepto el de registro antes de la fecha estipulada."
+                },
+                {
+                    q: "Si aún tengo preguntas, ¿a quién puedo contactar?",
+                    a: "Para pagos: Carolina Mejia +57 (310) 442-3888. Info Colombia: Ismael Marin +57 (300) 212-9289. Info Exterior: Jan Paol Mendez +1 (647) 701-6708. Habrá un canal de WhatsApp a partir del 1 de Febrero."
+                },
+                {
+                    q: "¿Habrá alguna reunión informativa?",
+                    a: "Primera reunión: 15 de Febrero de 2026 a las 8:00 pm por Zoom. Segunda reunión: 15 de Marzo de 2026 a las 8:00 pm por Zoom."
+                },
+                {
+                    q: "¿Cuál es la edad mínima para participar?",
+                    a: "13 años. El menor debe ir acompañado del adulto que se hará responsable de su seguridad y bienestar."
+                },
+                {
+                    q: "¿Cuál es la edad máxima para participar?",
+                    a: "No hay edad máxima."
+                },
+                {
+                    q: "¿Dónde puedo recibir más información acerca de NA Rangers?",
+                    a: "Español: https://www.nuevoamanecer.ca/ranger | Inglés: https://www.nuevoamanecer.ca/en/ranger"
+                }
+            ]
+        },
+
+        // Notes and Recommendations
+        notes: {
+            title: "Notas y Recomendaciones Importantes",
+            subtitle: "Lee cuidadosamente antes de asistir",
+            items: [
+                "No llegues tarde. Planea llegar al lugar a las 7:45 am.",
+                "Para viajeros internacionales: Se recomienda llegar el día anterior a Villeta y buscar alojamiento para facilitar la puntualidad y evitar el cansancio, ya que salir de Bogotá puede tomar más de dos horas.",
+                "Al ingresar la dirección, asegúrate de NO INGRESAR el restaurante Los Abuelos de La Vega, sino el de VILLETA.",
+                "Lugar de muchos mosquitos y zancudos. Se recomienda llevar repelente.",
+                "Viajeros internacionales podrán comunicarse con Roberto Tamara para asistencia con información respecto del transporte en Colombia.",
+                "No habrá reembolso para aquellos que no estén presentes al momento de comenzar el campamento.",
+                "Si necesitas llevar algún tipo de medicamento específico, debes informar en el momento de la inscripción y en el momento del registro el día del campamento."
+            ]
+        },
     },
 
     en: {
@@ -228,6 +311,89 @@ export const translations = {
         // Email
         email: {
             subject: "Pre-Registration Confirmation - HOREB 2026 Colombia",
+        },
+
+        // FAQ Section
+        faq: {
+            title: "Frequently Asked Questions",
+            subtitle: "Everything you need to know about HOREB 2026",
+            questions: [
+                {
+                    q: "What is the Rangers Camp?",
+                    a: "It's a dedicated time where we seek for a man to: Discover his IDENTITY, Walk daily in his PURPOSE, and Leave a LEGACY in his generation and for the next ones. This event exalts God's design in man and affirms him to fight and conquer every area of his life, becoming a Spiritual leader, of his Family, in Health, in Finances, and in the Community."
+                },
+                {
+                    q: "What is the schedule for the NA Rangers 'Horeb' Camp?",
+                    a: "April 2-5. Arrival: April 2 at 8:00 am. End: April 5 at 6:00 pm."
+                },
+                {
+                    q: "What is the meeting point?",
+                    a: "Kilometer 5 Villeta / La Vega Road — Los Abuelos Restaurant, Villeta Colombia. For international travelers: 1 hour 40 min from Bogotá. Nearest airport: El Dorado International Airport in Bogotá."
+                },
+                {
+                    q: "What is the cost?",
+                    a: "$800,000 COP for registrations until February 15 ($290 CAD). $1,000,000 COP from February 16 to March 15 ($350 CAD)."
+                },
+                {
+                    q: "What is the deposit amount?",
+                    a: "$200,000 COP / $75 CAD (non-refundable)."
+                },
+                {
+                    q: "When is the full payment deadline?",
+                    a: "February 15 to apply for the discount ($800,000 COP). March 15 to pay full price ($1,000,000 COP)."
+                },
+                {
+                    q: "What does the total camp cost include?",
+                    a: "Meals, military rations, camping permits, logistics, team materials (platoons), etc. Does NOT include breakfast on the first day or dinner on the last day."
+                },
+                {
+                    q: "What if I'm not in good physical condition?",
+                    a: "Don't let any limitation prevent you from participating and seeing what God has for you."
+                },
+                {
+                    q: "What if I have dietary restrictions?",
+                    a: "You must inform at the time of registration and check-in on the day of the camp."
+                },
+                {
+                    q: "Is there a discount if I'm going with other family members?",
+                    a: "No, camp prices cover fixed costs. For this reason, discounts are not allowed except early registration before the specified date."
+                },
+                {
+                    q: "If I still have questions, who can I contact?",
+                    a: "Payments: Carolina Mejia +57 (310) 442-3888. Colombia Info: Ismael Marin +57 (300) 212-9289. International: Jan Paol Mendez +1 (647) 701-6708. WhatsApp channel available from February 1."
+                },
+                {
+                    q: "Will there be an informational meeting?",
+                    a: "First meeting: February 15, 2026 at 8:00 pm via Zoom. Second meeting: March 15, 2026 at 8:00 pm via Zoom."
+                },
+                {
+                    q: "What is the minimum age to participate?",
+                    a: "13 years old. Minors must be accompanied by an adult who will be responsible for their safety and well-being."
+                },
+                {
+                    q: "What is the maximum age to participate?",
+                    a: "There is no maximum age."
+                },
+                {
+                    q: "Where can I get more information about NA Rangers?",
+                    a: "Spanish: https://www.nuevoamanecer.ca/ranger | English: https://www.nuevoamanecer.ca/en/ranger"
+                }
+            ]
+        },
+
+        // Notes and Recommendations
+        notes: {
+            title: "Important Notes and Recommendations",
+            subtitle: "Please read carefully before attending",
+            items: [
+                "Don't be late. Plan to arrive at the location by 7:45 am.",
+                "For international travelers: It is recommended to arrive the day before in Villeta and find accommodation to ensure punctuality and avoid fatigue, as leaving Bogotá can take more than two hours.",
+                "When entering the address, make sure NOT to go to Los Abuelos restaurant in La Vega, but the one in VILLETA.",
+                "Area with many mosquitoes. Insect repellent is recommended.",
+                "International travelers can contact Roberto Tamara for assistance with transportation information in Colombia.",
+                "There will be no refund for those who are not present when the camp begins.",
+                "If you need to bring any specific medication, you must inform at the time of registration and check-in on the day of the camp."
+            ]
         },
     },
 };

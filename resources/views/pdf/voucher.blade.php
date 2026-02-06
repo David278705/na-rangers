@@ -287,7 +287,7 @@
 
         <!-- Payment Instructions Section -->
         <div class="section">
-            <div class="section-title">💳 Instrucciones de Pago</div>
+            <div class="section-title">Instrucciones de Pago</div>
             <div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 15px 0;">
                 <p style="color: #065f46; margin-bottom: 15px; font-weight: 600;">Para completar tu registro, realiza el pago visitando:</p>
                 
@@ -296,16 +296,33 @@
                 </p>
                 
                 <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 20px;">
-                    <p style="margin: 0; color: #065f46; font-size: 13px; text-align: center;"><strong>💵 Aparta tu cupo con $200.000 COP</strong></p>
+                    <p style="margin: 0; color: #065f46; font-size: 13px; text-align: center;"><strong>Aparta tu cupo con $200.000 COP</strong></p>
                     <p style="margin: 5px 0 0 0; color: #065f46; font-size: 12px; text-align: center;">Tarifa completa: $800.000 hasta el 15 de febrero | $1.000.000 del 16 en adelante</p>
                 </div>
                 
                 <p style="color: #78350f; margin-top: 20px; font-size: 12px; background: #fef3c7; padding: 12px; border-radius: 6px;">
-                    <strong>📸 Importante:</strong> Una vez realizado el pago, envía el comprobante a <strong>narangers@naglobal.org</strong> o WhatsApp:<br>
-                    <strong>💵 Pagos:</strong> Carolina Mejia: +57 (310) 442-3888<br>
-                    <strong>🇨🇴 Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289<br>
-                    <strong>🌎 Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708
+                    <strong>Importante:</strong> Una vez realizado el pago, envía el comprobante a <strong>narangers@naglobal.org</strong> o WhatsApp:<br>
+                    <strong>Pagos:</strong> Carolina Mejia: +57 (310) 442-3888<br>
+                    <strong>Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289<br>
+                    <strong>Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708
                 </p>
+            </div>
+        </div>
+
+        <!-- Notes and Recommendations Section -->
+        <div class="section">
+            <div class="section-title">Notas y Recomendaciones Importantes</div>
+            <div style="background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px; padding: 15px; margin: 15px 0;">
+                <p style="color: #92400e; margin-bottom: 10px; font-size: 12px; font-weight: 600;">Lee cuidadosamente antes de asistir:</p>
+                <ul style="color: #78350f; font-size: 11px; line-height: 1.8; margin: 0; padding-left: 20px;">
+                    <li style="margin-bottom: 8px;"><strong>No llegues tarde.</strong> Planea llegar al lugar a las 7:45 am.</li>
+                    <li style="margin-bottom: 8px;"><strong>Viajeros internacionales:</strong> Se recomienda llegar el día anterior a Villeta y buscar alojamiento para facilitar la puntualidad y evitar el cansancio, ya que salir de Bogotá puede tomar más de dos horas.</li>
+                    <li style="margin-bottom: 8px;"><strong>Dirección correcta:</strong> Al ingresar la dirección, asegúrate de NO INGRESAR el restaurante Los Abuelos de La Vega, sino el de <strong>VILLETA</strong>.</li>
+                    <li style="margin-bottom: 8px;"><strong>Repelente:</strong> Lugar de muchos mosquitos y zancudos. Se recomienda llevar repelente.</li>
+                    <li style="margin-bottom: 8px;"><strong>Transporte:</strong> Viajeros internacionales podrán comunicarse con Roberto Tamara para asistencia con información respecto del transporte en Colombia.</li>
+                    <li style="margin-bottom: 8px;"><strong>Sin reembolsos:</strong> No habrá reembolso para aquellos que no estén presentes al momento de comenzar el campamento.</li>
+                    <li><strong>Medicamentos:</strong> Si necesitas llevar algún tipo de medicamento específico, debes informar en el momento de la inscripción y en el momento del registro el día del campamento.</li>
+                </ul>
             </div>
         </div>
 

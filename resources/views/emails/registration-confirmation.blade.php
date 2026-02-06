@@ -192,14 +192,14 @@
 
             <!-- Payment Instructions -->
             <div class="event-details">
-                <h3>💰 1. Realiza Tu Pago</h3>
+                <h3>1. Realiza Tu Pago</h3>
                 <p style="margin-bottom: 15px; color: #475569;">Para confirmar tu registro, realiza el pago a través de nuestro sistema de pagos en línea:</p>
                 
                 <div style="background: #ffffff; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 15px 0; text-align: center;">
                     <p style="color: #475569; margin-bottom: 15px; font-weight: 600;">Haz clic en el siguiente botón para ir al portal de pagos:</p>
                     <a href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=13875&searchedCategoryId=&searchedAgreementName=IGLESIA%20CRISTIANA%20NUEVO%20AMANECER" 
                        style="display: inline-block; background: #059669; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 700; font-size: 16px; margin: 10px 0;" 
-                       target="_blank">💳 PAGAR AHORA</a>
+                       target="_blank">PAGAR AHORA</a>
                     
                     <div style="margin: 20px 0; padding: 15px; background: #f0fdf4; border-radius: 6px;">
                         <p style="color: #065f46; font-size: 14px; margin-bottom: 10px;"><strong>O escanea este código QR:</strong></p>
@@ -210,23 +210,23 @@
 
             <!-- Send Proof Instructions -->
             <div class="event-details" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
-                <h3>📸 2. Envío del Comprobante</h3>
+                <h3>2. Envío del Comprobante</h3>
                 <p style="color: #78350f; margin-bottom: 10px;">Una vez realizado el pago, por favor, <strong>envía un pantallazo o foto del comprobante de pago</strong> a:</p>
                 <div style="text-align: center; margin: 15px 0;">
                     <a href="mailto:narangers@naglobal.org" style="display: inline-block; background: #059669; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600;">narangers@naglobal.org</a>
                 </div>
-                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">📱 O por WhatsApp:</p>
+                <p style="color: #78350f; font-size: 13px; margin-top: 10px;">O por WhatsApp:</p>
                 <div style="color: #065f46; font-size: 13px; line-height: 1.8; margin: 10px 0;">
-                    <p><strong>💵 Pagos:</strong> Carolina Mejia: +57 (310) 442-3888</p>
-                    <p><strong>🇨🇴 Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289</p>
-                    <p><strong>🌎 Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708</p>
+                    <p><strong>Pagos:</strong> Carolina Mejia: +57 (310) 442-3888</p>
+                    <p><strong>Info Colombia:</strong> Ismael Marin: +57 (300) 212-9289</p>
+                    <p><strong>Info Exterior:</strong> Jan Paol Mendez: +1 (647) 701-6708</p>
                 </div>
                 <p style="color: #78350f; font-size: 12px; margin-top: 10px; font-style: italic;">Este paso es crucial, ya que nos permite identificarte y completar tu registro formalmente.</p>
             </div>
 
             <!-- Pricing Table -->
             <div class="participant-info" style="background: #f0fdf4; border: 2px solid #86efac;">
-                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">🚨 Recordatorio Importante: ¡Aprovecha la Tarifa Especial!</h4>
+                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">Recordatorio Importante: ¡Aprovecha la Tarifa Especial!</h4>
                 <p style="color: #065f46; margin-bottom: 15px;">Hemos extendido la fecha para tu beneficio. Esta es la estructura de tarifas:</p>
                 
                 <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
@@ -249,11 +249,11 @@
                 </table>
                 
                 <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 15px;">
-                    <p style="margin: 0; color: #065f46; font-weight: 600; font-size: 15px;">✅ ¡Asegura tu tarifa especial de $800.000 COP pagando antes del 15 de febrero!</p>
+                    <p style="margin: 0; color: #065f46; font-weight: 600; font-size: 15px;">¡Asegura tu tarifa especial de $800.000 COP pagando antes del 15 de febrero!</p>
                 </div>
                 
                 <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
-                    <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">💵 ¡Puedes apartar tu cupo con solo $200.000 COP!</p>
+                    <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">¡Puedes apartar tu cupo con solo $200.000 COP!</p>
                     <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Realiza un abono de $200.000 COP para reservar tu lugar y completa el pago del saldo restante antes del evento.</p>
                 </div>
                 
@@ -272,7 +272,7 @@
 
             <!-- Participant Info -->
             <div class="participant-info">
-                <h4>📋 Tus Datos de Pre-Registro</h4>
+                <h4>Tus Datos de Pre-Registro</h4>
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="info-item-label">Nombre Completo</div>
@@ -299,10 +299,25 @@
 
             <!-- Message -->
             <div class="message">
-                <p><strong>📎 Comprobante Adjunto</strong></p>
+                <p><strong>Comprobante Adjunto</strong></p>
                 <p>Adjuntamos tu comprobante de pre-registro en formato PDF. Guárdalo junto con el comprobante de pago que realizarás.</p>
             </div>
-
+            <!-- Notes and Recommendations -->
+            <div class="participant-info" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+                <h4 style="color: #78350f; display: flex; align-items: center; gap: 8px;">
+                    Notas y Recomendaciones Importantes
+                </h4>
+                <p style="color: #92400e; font-size: 13px; margin-bottom: 12px;">Lee cuidadosamente antes de asistir:</p>
+                <ul style="color: #78350f; font-size: 13px; line-height: 1.8; margin: 0; padding-left: 20px;">
+                    <li><strong>No llegues tarde.</strong> Planea llegar al lugar a las 7:45 am.</li>
+                    <li><strong>Viajeros internacionales:</strong> Se recomienda llegar el día anterior a Villeta y buscar alojamiento para facilitar la puntualidad y evitar el cansancio, ya que salir de Bogotá puede tomar más de dos horas.</li>
+                    <li><strong>Dirección correcta:</strong> Al ingresar la dirección, asegúrate de NO INGRESAR el restaurante Los Abuelos de La Vega, sino el de <strong>VILLETA</strong>.</li>
+                    <li><strong>Repelente:</strong> Lugar de muchos mosquitos y zancudos. Se recomienda llevar repelente.</li>
+                    <li><strong>Transporte:</strong> Viajeros internacionales podrán comunicarse con Roberto Tamara para asistencia con información respecto del transporte en Colombia.</li>
+                    <li><strong>Sin reembolsos:</strong> No habrá reembolso para aquellos que no estén presentes al momento de comenzar el campamento.</li>
+                    <li><strong>Medicamentos:</strong> Si necesitas llevar algún tipo de medicamento específico, debes informar en el momento de la inscripción y en el momento del registro el día del campamento.</li>
+                </ul>
+            </div>
             <div class="message">
                 <p style="color: #475569; line-height: 1.8;">Si tienes alguna pregunta, no dudes en contactarnos.</p>
                 <p style="margin-top: 20px;"><strong>Atentamente,</strong><br>El equipo de NA Rangers</p>
@@ -313,7 +328,7 @@
         <div class="footer">
             <div class="footer-text" style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #fbbf24;">
                 <p style="margin: 0; color: #78350f; font-size: 13px;">
-                    ⚠️ <strong>Nota:</strong> Este es un correo automático. Por favor no responder a esta dirección. Para cualquier consulta, contacta a <a href="mailto:narangers@naglobal.org" style="color: #059669; text-decoration: underline;">narangers@naglobal.org</a>
+                    <strong>Nota:</strong> Este es un correo automático. Por favor no responder a esta dirección. Para cualquier consulta, contacta a <a href="mailto:narangers@naglobal.org" style="color: #059669; text-decoration: underline;">narangers@naglobal.org</a>
                 </p>
             </div>
             <div class="footer-text">
