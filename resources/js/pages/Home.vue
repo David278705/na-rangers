@@ -278,6 +278,23 @@
                             />
                         </div>
 
+                        <!-- Phone -->
+                        <div class="space-y-2">
+                            <label
+                                class="block text-sm font-medium text-zinc-700"
+                            >
+                                {{ t.form.phone }} *
+                            </label>
+                            <input
+                                v-model="formData.phone"
+                                type="tel"
+                                required
+                                pattern="[\d\s\+\-\(\)]+"
+                                class="w-full border border-zinc-300 rounded-lg px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                                :placeholder="t.form.phonePlaceholder"
+                            />
+                        </div>
+
                         <!-- Fecha de Nacimiento y Documento -->
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
@@ -524,6 +541,7 @@ export default {
             firstName: "",
             lastName: "",
             email: "",
+            phone: "",
             dateOfBirth: "",
             documentId: "",
             placeOfOrigin: "",
@@ -575,6 +593,7 @@ export default {
                     first_name: formData.firstName,
                     last_name: formData.lastName,
                     email: formData.email,
+                    phone: formData.phone,
                     date_of_birth: formData.dateOfBirth,
                     document_id: formData.documentId,
                     place_of_origin: formData.placeOfOrigin,

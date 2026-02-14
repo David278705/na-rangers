@@ -219,6 +219,10 @@
                     <div class="info-value">{{ $registration->email }}</div>
                 </div>
                 <div class="info-item">
+                    <div class="info-label">Teléfono</div>
+                    <div class="info-value">{{ $registration->phone }}</div>
+                </div>
+                <div class="info-item">
                     <div class="info-label">Documento de Identidad</div>
                     <div class="info-value">{{ $registration->document_id }}</div>
                 </div>

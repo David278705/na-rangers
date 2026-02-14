@@ -98,6 +98,7 @@
                                     </div>
                                 </th>
                                 <th class="px-4 py-3 text-left text-white font-semibold">Email</th>
+                                <th class="px-4 py-3 text-left text-white font-semibold">Teléfono</th>
                                 <th class="px-4 py-3 text-left text-white font-semibold">Documento</th>
                                 <th class="px-4 py-3 text-left text-white font-semibold">Ministerio</th>
                                 <th class="px-4 py-3 text-left text-white font-semibold">Talla</th>
@@ -122,6 +123,9 @@
                                 </td>
                                 <td class="px-4 py-3 text-white/80 text-sm">
                                     {{ reg.email }}
+                                </td>
+                                <td class="px-4 py-3 text-white/80 text-sm">
+                                    {{ reg.phone || 'N/A' }}
                                 </td>
                                 <td class="px-4 py-3 text-white/80 text-sm">
                                     {{ reg.document_id }}
@@ -239,6 +243,11 @@
                     <div>
                         <label class="block text-white/50 text-xs uppercase tracking-wider mb-1">Email</label>
                         <p class="text-white">{{ selectedRegistration.email }}</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-white/50 text-xs uppercase tracking-wider mb-1">Teléfono</label>
+                        <p class="text-white">{{ selectedRegistration.phone || 'N/A' }}</p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">

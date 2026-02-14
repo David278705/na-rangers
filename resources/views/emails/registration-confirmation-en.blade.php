@@ -283,6 +283,10 @@
                         <div class="info-item-value">{{ $registration->email }}</div>
                     </div>
                     <div class="info-item">
+                        <div class="info-item-label">Phone</div>
+                        <div class="info-item-value">{{ $registration->phone }}</div>
+                    </div>
+                    <div class="info-item">
                         <div class="info-item-label">Document</div>
                         <div class="info-item-value">{{ $registration->document_id }}</div>
                     </div>
