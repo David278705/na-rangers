@@ -10,7 +10,7 @@ export const translations = {
                 "Un encuentro transformador en las montañas de Colombia",
             priceInfo: "💵 Aparta tu cupo con $200.000 COP",
             priceDetails:
-                "Tarifa completa: $800.000 hasta el 15 de febrero | $1.000.000 del 16 en adelante",
+                "Tarifa: $1.000.000 COP | Aparta tu cupo con $200.000 COP",
             registerButton: "Registrarse Ahora",
             address:
                 "Kilómetro 5 Vía Villeta / La Vega — Restaurante Los Abuelos, Villeta Colombia",
@@ -98,7 +98,7 @@ export const translations = {
             referenceNote: "Guarda este código para referencia",
             nextSteps: "Próximos Pasos",
             step1: "Revisa tu correo (incluyendo spam) con las instrucciones de pago",
-            step2: "Realiza el pago a través del link en el correo o escaneando el código QR. Puedes apartar tu cupo con $200.000 COP. Tarifa completa: $800.000 COP hasta el 15 de febrero, $1.000.000 COP del 16 de febrero en adelante",
+            step2: "Realiza el pago a través del link en el correo o escaneando el código QR. Puedes apartar tu cupo con $200.000 COP. Tarifa completa: $1.000.000 COP",
             step3: "Envía el comprobante - Pagos: Carolina Mejia +57 (310) 442-3888 | Info Colombia: Ismael Marin +57 (300) 212-9289 | Info Exterior: Jan Paol Mendez +1 (647) 701-6708",
             step4: "Recibirás confirmación final una vez procesado tu pago",
             step5: "Síguenos en Instagram @na.rangers para actualizaciones",
@@ -135,7 +135,7 @@ export const translations = {
                 },
                 {
                     q: "¿Cuál es el costo?",
-                    a: "$800.000 COP para inscritos hasta el 15 de Febrero ($290 CAD). $1'000.000 COP desde el 16 de Febrero hasta el 15 de Marzo ($350 CAD)."
+                    a: "$1'000.000 COP ($350 CAD). Puedes apartar tu cupo con $200.000 COP."
                 },
                 {
                     q: "¿Cuál es el valor del depósito?",
@@ -143,7 +143,7 @@ export const translations = {
                 },
                 {
                     q: "¿Cuándo es la fecha límite de pago total?",
-                    a: "15 de Febrero para aplicar al descuento ($800.000 COP). 15 de Marzo para pagar precio completo ($1'000.000 COP)."
+                    a: "15 de Marzo para completar el pago ($1'000.000 COP)."
                 },
                 {
                     q: "¿Qué incluye el valor total del campamento?",
@@ -167,7 +167,7 @@ export const translations = {
                 },
                 {
                     q: "¿Habrá alguna reunión informativa?",
-                    a: "Primera reunión: 15 de Febrero de 2026 a las 8:00 pm por Zoom. Segunda reunión: 15 de Marzo de 2026 a las 8:00 pm por Zoom."
+                    a: "Primera reunión: 22 de Febrero de 2026 a las 8:00 pm por Zoom. Segunda reunión: 15 de Marzo de 2026 a las 8:00 pm por Zoom."
                 },
                 {
                     q: "¿Cuál es la edad mínima para participar?",
@@ -211,7 +211,7 @@ export const translations = {
                 "A transformative encounter in the mountains of Colombia",
             priceInfo: "💵 Reserve your spot with $200,000 COP",
             priceDetails:
-                "Full rate: $800,000 until February 15 | $1,000,000 from February 16 onwards",
+                "Rate: $1,000,000 COP | Reserve your spot with $200,000 COP",
             registerButton: "Register Now",
             address:
                 "Kilometer 5 Villeta / La Vega Road — Los Abuelos Restaurant, Villeta Colombia",
@@ -299,7 +299,7 @@ export const translations = {
             referenceNote: "Save this code for reference",
             nextSteps: "Next Steps",
             step1: "Check your email (including spam) with payment instructions",
-            step2: "Make your payment through the link in the email or by scanning the QR code. You can reserve your spot with $200,000 COP. Full rate: $800,000 COP until February 15, $1,000,000 COP from February 16 onwards",
+            step2: "Make your payment through the link in the email or by scanning the QR code. You can reserve your spot with $200,000 COP. Full rate: $1,000,000 COP",
             step3: "Send receipt - Payments: Carolina Mejia +57 (310) 442-3888 | Colombia Info: Ismael Marin +57 (300) 212-9289 | International: Jan Paol Mendez +1 (647) 701-6708",
             step4: "You will receive final confirmation once your payment is processed",
             step5: "Follow us on Instagram @na.rangers for updates",
@@ -336,7 +336,7 @@ export const translations = {
                 },
                 {
                     q: "What is the cost?",
-                    a: "$800,000 COP for registrations until February 15 ($290 CAD). $1,000,000 COP from February 16 to March 15 ($350 CAD)."
+                    a: "$1,000,000 COP ($350 CAD). You can reserve your spot with $200,000 COP."
                 },
                 {
                     q: "What is the deposit amount?",
@@ -344,7 +344,7 @@ export const translations = {
                 },
                 {
                     q: "When is the full payment deadline?",
-                    a: "February 15 to apply for the discount ($800,000 COP). March 15 to pay full price ($1,000,000 COP)."
+                    a: "March 15 to complete full payment ($1,000,000 COP)."
                 },
                 {
                     q: "What does the total camp cost include?",
@@ -368,7 +368,7 @@ export const translations = {
                 },
                 {
                     q: "Will there be an informational meeting?",
-                    a: "First meeting: February 15, 2026 at 8:00 pm via Zoom. Second meeting: March 15, 2026 at 8:00 pm via Zoom."
+                    a: "First meeting: February 22, 2026 at 8:00 pm via Zoom. Second meeting: March 15, 2026 at 8:00 pm via Zoom."
                 },
                 {
                     q: "What is the minimum age to participate?",

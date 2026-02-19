@@ -301,7 +301,7 @@
                 
                 <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 20px;">
                     <p style="margin: 0; color: #065f46; font-size: 13px; text-align: center;"><strong>Aparta tu cupo con $200.000 COP</strong></p>
-                    <p style="margin: 5px 0 0 0; color: #065f46; font-size: 12px; text-align: center;">Tarifa completa: $800.000 hasta el 15 de febrero | $1.000.000 del 16 en adelante</p>
+                    <p style="margin: 5px 0 0 0; color: #065f46; font-size: 12px; text-align: center;">Tarifa: $1.000.000 COP | Fecha límite de pago: 15 de Marzo de 2026</p>
                 </div>
                 
                 <p style="color: #78350f; margin-top: 20px; font-size: 12px; background: #fef3c7; padding: 12px; border-radius: 6px;">

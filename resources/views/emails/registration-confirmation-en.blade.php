@@ -226,38 +226,33 @@
 
             <!-- Pricing Table -->
             <div class="participant-info" style="background: #f0fdf4; border: 2px solid #86efac;">
-                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">Important Reminder: Take Advantage of the Special Rate!</h4>
-                <p style="color: #065f46; margin-bottom: 15px;">We have extended the date for your benefit. This is the pricing structure:</p>
+                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">Payment Information</h4>
                 
                 <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
                     <thead>
                         <tr style="background: #059669; color: #ffffff;">
-                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Payment Period</th>
-                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Cost per Person</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Concept</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="background: #ffffff;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>From today until February 15th</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$800,000 COP</strong><br><span style="font-size: 12px;">(Eight hundred thousand Colombian pesos)</span></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Camp registration fee</strong></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1,000,000 COP</strong><br><span style="font-size: 12px;">(One million Colombian pesos)</span></td>
                         </tr>
                         <tr style="background: #f0fdf4;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>From February 16th onwards</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1,000,000 COP</strong><br><span style="font-size: 12px;">(One million Colombian pesos)</span></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Minimum deposit to reserve your spot</strong></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$200,000 COP</strong><br><span style="font-size: 12px;">(Non-refundable)</span></td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 15px;">
-                    <p style="margin: 0; color: #065f46; font-weight: 600; font-size: 15px;">Secure your special rate of $800,000 COP by paying before February 15!</p>
-                </div>
                 
                 <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
                     <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">You can reserve your spot with just $200,000 COP!</p>
                     <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Make a deposit of $200,000 COP to reserve your place and complete the remaining balance before the event.</p>
                 </div>
                 
-                <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Important:</strong> The applicable rate will be the one in effect on the date your payment is received, not the date of your pre-registration.</p>
+                <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Important:</strong> The deadline to complete full payment is March 15, 2026.</p>
                 <p style="color: #065f46; font-size: 13px;"><strong>Don't miss this deadline to secure your rate and your spot at Horeb Camp 2026!</strong></p>
             </div>
 

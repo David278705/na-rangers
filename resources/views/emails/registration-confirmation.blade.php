@@ -226,38 +226,33 @@
 
             <!-- Pricing Table -->
             <div class="participant-info" style="background: #f0fdf4; border: 2px solid #86efac;">
-                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">Recordatorio Importante: ¡Aprovecha la Tarifa Especial!</h4>
-                <p style="color: #065f46; margin-bottom: 15px;">Hemos extendido la fecha para tu beneficio. Esta es la estructura de tarifas:</p>
+                <h4 style="color: #065f46; border-bottom: 2px solid #86efac;">Información de Pago</h4>
                 
                 <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
                     <thead>
                         <tr style="background: #059669; color: #ffffff;">
-                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Período de Pago</th>
-                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Costo por Persona</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Concepto</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #10b981;">Valor</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="background: #ffffff;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Desde hoy hasta el 15 de febrero</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$800.000 COP</strong><br><span style="font-size: 12px;">(Ochocientos mil pesos colombianos)</span></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Tarifa del campamento</strong></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1.000.000 COP</strong><br><span style="font-size: 12px;">(Un millón de pesos colombianos)</span></td>
                         </tr>
                         <tr style="background: #f0fdf4;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>A partir del 16 de febrero</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1.000.000 COP</strong><br><span style="font-size: 12px;">(Un millón de pesos colombianos)</span></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Depósito mínimo para apartar cupo</strong></td>
+                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$200.000 COP</strong><br><span style="font-size: 12px;">(No reembolsable)</span></td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <div style="background: #dcfce7; padding: 15px; border-radius: 6px; margin-top: 15px;">
-                    <p style="margin: 0; color: #065f46; font-weight: 600; font-size: 15px;">¡Asegura tu tarifa especial de $800.000 COP pagando antes del 15 de febrero!</p>
-                </div>
                 
                 <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
                     <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">¡Puedes apartar tu cupo con solo $200.000 COP!</p>
                     <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Realiza un abono de $200.000 COP para reservar tu lugar y completa el pago del saldo restante antes del evento.</p>
                 </div>
                 
-                <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Importante:</strong> La tarifa que se aplicará es la vigente a la fecha en la que se reciba tu pago, y no la de tu pre-registración.</p>
+                <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Importante:</strong> La fecha límite para completar el pago es el 15 de Marzo de 2026.</p>
                 <p style="color: #065f46; font-size: 13px;"><strong>¡No dejes pasar esta fecha límite para asegurar tu tarifa y tu lugar en el Campamento Horeb 2026!</strong></p>
             </div>
 
