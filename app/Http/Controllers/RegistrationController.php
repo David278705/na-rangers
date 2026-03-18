@@ -112,6 +112,11 @@ class RegistrationController extends Controller
 
     public function store(Request $request)
     {
+        return response()->json([
+            'success' => false,
+            'message' => 'Las inscripciones están cerradas.',
+        ], 403);
+
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',

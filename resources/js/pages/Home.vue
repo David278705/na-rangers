@@ -100,27 +100,14 @@
                         </div>
                     </div>
 
-                    <!-- CTA -->
-                    <div>
-                        <button
-                            @click="showForm = true"
-                            class="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-lg text-lg font-semibold transition-transform shadow-lg hover:scale-105"
-                        >
-                            {{ t.landing.registerButton }}
-                            <svg
-                                class="w-5 h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                                />
-                            </svg>
-                        </button>
+                    <!-- Registrations closed notice -->
+                    <div class="max-w-2xl rounded-lg border-2 border-rose-400/70 bg-rose-500/20 p-5 backdrop-blur-sm">
+                        <p class="text-lg font-semibold text-rose-100">
+                            {{ currentLang === 'es' ? 'Inscripciones cerradas' : 'Registrations closed' }}
+                        </p>
+                        <p class="mt-1 text-sm text-rose-100/90">
+                            {{ currentLang === 'es' ? 'El formulario de inscripción no está disponible en este momento.' : 'The registration form is not available at this time.' }}
+                        </p>
                     </div>
 
                     <!-- FAQ Section -->
@@ -183,7 +170,7 @@
 
         <!-- Registration Form Section -->
         <section
-            v-else
+            v-else-if="false"
             class="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-emerald-800 py-16 px-6"
         >
             <div class="max-w-2xl mx-auto">
@@ -555,6 +542,16 @@ export default {
         });
 
         const handleSubmit = async () => {
+            Swal.fire({
+                icon: "info",
+                title: currentLang.value === 'es' ? 'Inscripciones cerradas' : 'Registrations closed',
+                text: currentLang.value === 'es'
+                    ? 'No estamos recibiendo nuevas inscripciones en este momento.'
+                    : 'We are not accepting new registrations at this time.',
+                confirmButtonColor: "#6b7280",
+            });
+            return;
+
             // Mostrar confirmación con SweetAlert
             const result = await Swal.fire({
                 title: t.value.confirmation.title,
