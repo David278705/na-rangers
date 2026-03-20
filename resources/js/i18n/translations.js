@@ -8,9 +8,9 @@ export const translations = {
             subtitle: "HOREB 2026",
             description:
                 "Un encuentro transformador en las montañas de Colombia",
-            priceInfo: "💵 Aparta tu cupo con $200.000 COP",
+            priceInfo: "💵 Tarifa oficial: $1.000.000 COP",
             priceDetails:
-                "Tarifa: $1.000.000 COP | Aparta tu cupo con $200.000 COP",
+                "Tarifa única: $1.000.000 COP",
             registerButton: "Registrarse Ahora",
             address:
                 "Kilómetro 5 Vía Villeta / La Vega — Restaurante Los Abuelos, Villeta Colombia",
@@ -98,7 +98,7 @@ export const translations = {
             referenceNote: "Guarda este código para referencia",
             nextSteps: "Próximos Pasos",
             step1: "Revisa tu correo (incluyendo spam) con las instrucciones de pago",
-            step2: "Realiza el pago a través del link en el correo o escaneando el código QR. Puedes apartar tu cupo con $200.000 COP. Tarifa completa: $1.000.000 COP",
+            step2: "Realiza el pago a través del link en el correo o escaneando el código QR. Tarifa: $1.000.000 COP.",
             step3: "Envía el comprobante - Pagos: Carolina Mejia +57 (310) 442-3888 | Info Colombia: Ismael Marin +57 (300) 212-9289 | Info Exterior: Jan Paol Mendez +1 (647) 701-6708",
             step4: "Recibirás confirmación final una vez procesado tu pago",
             step5: "Síguenos en Instagram @na.rangers para actualizaciones",
@@ -135,11 +135,11 @@ export const translations = {
                 },
                 {
                     q: "¿Cuál es el costo?",
-                    a: "$1'000.000 COP ($350 CAD). Puedes apartar tu cupo con $200.000 COP."
+                    a: "$1'000.000 COP ($350 CAD)."
                 },
                 {
-                    q: "¿Cuál es el valor del depósito?",
-                    a: "$200.000 COP / $75 CAD (no reembolsables)."
+                    q: "¿Se maneja depósito parcial?",
+                    a: "No. El pago se realiza por la tarifa total del campamento."
                 },
                 {
                     q: "¿Cuándo es la fecha límite de pago total?",
@@ -209,9 +209,9 @@ export const translations = {
             subtitle: "HOREB 2026",
             description:
                 "A transformative encounter in the mountains of Colombia",
-            priceInfo: "💵 Reserve your spot with $200,000 COP",
+            priceInfo: "💵 Official rate: $1,000,000 COP",
             priceDetails:
-                "Rate: $1,000,000 COP | Reserve your spot with $200,000 COP",
+                "Single rate: $1,000,000 COP",
             registerButton: "Register Now",
             address:
                 "Kilometer 5 Villeta / La Vega Road — Los Abuelos Restaurant, Villeta Colombia",
@@ -299,7 +299,7 @@ export const translations = {
             referenceNote: "Save this code for reference",
             nextSteps: "Next Steps",
             step1: "Check your email (including spam) with payment instructions",
-            step2: "Make your payment through the link in the email or by scanning the QR code. You can reserve your spot with $200,000 COP. Full rate: $1,000,000 COP",
+            step2: "Make your payment through the link in the email or by scanning the QR code. Rate: $1,000,000 COP.",
             step3: "Send receipt - Payments: Carolina Mejia +57 (310) 442-3888 | Colombia Info: Ismael Marin +57 (300) 212-9289 | International: Jan Paol Mendez +1 (647) 701-6708",
             step4: "You will receive final confirmation once your payment is processed",
             step5: "Follow us on Instagram @na.rangers for updates",
@@ -336,11 +336,11 @@ export const translations = {
                 },
                 {
                     q: "What is the cost?",
-                    a: "$1,000,000 COP ($350 CAD). You can reserve your spot with $200,000 COP."
+                    a: "$1,000,000 COP ($350 CAD)."
                 },
                 {
-                    q: "What is the deposit amount?",
-                    a: "$200,000 COP / $75 CAD (non-refundable)."
+                    q: "Is partial deposit available?",
+                    a: "No. Payment is processed for the full camp rate."
                 },
                 {
                     q: "When is the full payment deadline?",

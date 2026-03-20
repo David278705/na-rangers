@@ -15,6 +15,7 @@ Route::get('/test', function () {
 });
 
 // Registration routes
+Route::get('/registrations/status', [RegistrationController::class, 'status']);
 Route::post('/registrations', [RegistrationController::class, 'store']);
 Route::get('/registrations', [RegistrationController::class, 'index']);
 Route::get('/registrations/export/excel', [RegistrationController::class, 'exportExcel']);

@@ -29,7 +29,7 @@
         </div>
 
         <!-- Landing Section -->
-        <section v-if="!showForm" class="min-h-screen relative">
+        <section v-if="!showForm || !registrationsOpen" class="min-h-screen relative">
             <!-- Background Image with Overlay -->
             <div class="fixed inset-0 z-0 h-screen">
                 <img
@@ -100,13 +100,39 @@
                         </div>
                     </div>
 
+                    <!-- CTA -->
+                    <div v-if="registrationsOpen" class="space-y-3">
+                        <button
+                            @click="showForm = true"
+                            class="inline-flex items-center gap-3 bg-emerald-500 text-white px-10 py-5 rounded-lg text-lg font-semibold transition-transform shadow-lg hover:scale-105"
+                        >
+                            {{ t.landing.registerButton }}
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                />
+                            </svg>
+                        </button>
+                        <p class="text-sm text-emerald-200/90 font-medium">
+                            {{ currentLang === 'es' ? `Cupos disponibles: ${remainingSlots}` : `Available spots: ${remainingSlots}` }}
+                        </p>
+                    </div>
+
                     <!-- Registrations closed notice -->
-                    <div class="max-w-2xl rounded-lg border-2 border-rose-400/70 bg-rose-500/20 p-5 backdrop-blur-sm">
+                    <div v-else class="max-w-2xl rounded-lg border-2 border-rose-400/70 bg-rose-500/20 p-5 backdrop-blur-sm">
                         <p class="text-lg font-semibold text-rose-100">
                             {{ currentLang === 'es' ? 'Inscripciones cerradas' : 'Registrations closed' }}
                         </p>
                         <p class="mt-1 text-sm text-rose-100/90">
-                            {{ currentLang === 'es' ? 'El formulario de inscripción no está disponible en este momento.' : 'The registration form is not available at this time.' }}
+                            {{ currentLang === 'es' ? 'Ya se completaron los cupos disponibles.' : 'All available spots have been filled.' }}
                         </p>
                     </div>
 
@@ -170,7 +196,7 @@
 
         <!-- Registration Form Section -->
         <section
-            v-else-if="false"
+            v-else-if="showForm && registrationsOpen"
             class="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-emerald-800 py-16 px-6"
         >
             <div class="max-w-2xl mx-auto">
@@ -513,7 +539,7 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { ref, reactive, onMounted } from "vue";
 import axios from "axios";
 import { useI18n } from "../composables/useI18n.js";
 
@@ -523,6 +549,23 @@ export default {
         const { t, currentLang, changeLanguage } = useI18n();
         const showForm = ref(false);
         const loading = ref(false);
+        const registrationsOpen = ref(false);
+        const remainingSlots = ref(0);
+
+        const fetchRegistrationStatus = async () => {
+            try {
+                const response = await axios.get("/api/registrations/status");
+                registrationsOpen.value = Boolean(response.data?.open);
+                remainingSlots.value = Number(response.data?.remaining ?? 0);
+
+                if (!registrationsOpen.value) {
+                    showForm.value = false;
+                }
+            } catch (error) {
+                registrationsOpen.value = false;
+                remainingSlots.value = 0;
+            }
+        };
 
         const formData = reactive({
             firstName: "",
@@ -542,15 +585,17 @@ export default {
         });
 
         const handleSubmit = async () => {
-            Swal.fire({
-                icon: "info",
-                title: currentLang.value === 'es' ? 'Inscripciones cerradas' : 'Registrations closed',
-                text: currentLang.value === 'es'
-                    ? 'No estamos recibiendo nuevas inscripciones en este momento.'
-                    : 'We are not accepting new registrations at this time.',
-                confirmButtonColor: "#6b7280",
-            });
-            return;
+            if (!registrationsOpen.value || remainingSlots.value <= 0) {
+                Swal.fire({
+                    icon: "info",
+                    title: currentLang.value === 'es' ? 'Inscripciones cerradas' : 'Registrations closed',
+                    text: currentLang.value === 'es'
+                        ? 'Ya se completaron los cupos disponibles.'
+                        : 'All available spots have been filled.',
+                    confirmButtonColor: "#6b7280",
+                });
+                return;
+            }
 
             // Mostrar confirmación con SweetAlert
             const result = await Swal.fire({
@@ -608,6 +653,7 @@ export default {
                 });
 
                 const { registration } = response.data;
+                remainingSlots.value = Number(response.data?.remaining ?? remainingSlots.value);
 
                 // Mostrar éxito
                 Swal.fire({
@@ -643,10 +689,18 @@ export default {
                     html: errorMessage,
                     confirmButtonColor: "#ef4444",
                 });
+
+                if (error.response?.status === 403) {
+                    await fetchRegistrationStatus();
+                }
             } finally {
                 loading.value = false;
             }
         };
+
+        onMounted(() => {
+            fetchRegistrationStatus();
+        });
 
         const formatAnswer = (text) => {
             if (!text) return '';
@@ -669,6 +723,8 @@ export default {
         return {
             showForm,
             loading,
+            registrationsOpen,
+            remainingSlots,
             formData,
             handleSubmit,
             formatAnswer,

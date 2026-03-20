@@ -240,17 +240,8 @@
                             <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Tarifa del campamento</strong></td>
                             <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1.000.000 COP</strong><br><span style="font-size: 12px;">(Un millón de pesos colombianos)</span></td>
                         </tr>
-                        <tr style="background: #f0fdf4;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Depósito mínimo para apartar cupo</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$200.000 COP</strong><br><span style="font-size: 12px;">(No reembolsable)</span></td>
-                        </tr>
                     </tbody>
                 </table>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
-                    <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">¡Puedes apartar tu cupo con solo $200.000 COP!</p>
-                    <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Realiza un abono de $200.000 COP para reservar tu lugar y completa el pago del saldo restante antes del evento.</p>
-                </div>
                 
                 <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Importante:</strong> La fecha límite para completar el pago es el 15 de Marzo de 2026.</p>
                 <p style="color: #065f46; font-size: 13px;"><strong>¡No dejes pasar esta fecha límite para asegurar tu tarifa y tu lugar en el Campamento Horeb 2026!</strong></p>

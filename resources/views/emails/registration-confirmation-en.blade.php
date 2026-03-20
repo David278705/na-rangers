@@ -240,17 +240,8 @@
                             <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Camp registration fee</strong></td>
                             <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$1,000,000 COP</strong><br><span style="font-size: 12px;">(One million Colombian pesos)</span></td>
                         </tr>
-                        <tr style="background: #f0fdf4;">
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>Minimum deposit to reserve your spot</strong></td>
-                            <td style="padding: 12px; border: 1px solid #d1fae5; color: #065f46;"><strong>$200,000 COP</strong><br><span style="font-size: 12px;">(Non-refundable)</span></td>
-                        </tr>
                     </tbody>
                 </table>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 6px; margin-top: 15px; border: 2px solid #f59e0b;">
-                    <p style="margin: 0; color: #78350f; font-weight: 600; font-size: 15px;">You can reserve your spot with just $200,000 COP!</p>
-                    <p style="margin: 10px 0 0 0; color: #78350f; font-size: 13px;">Make a deposit of $200,000 COP to reserve your place and complete the remaining balance before the event.</p>
-                </div>
                 
                 <p style="color: #065f46; margin-top: 15px; font-size: 13px;"><strong>Important:</strong> The deadline to complete full payment is March 15, 2026.</p>
                 <p style="color: #065f46; font-size: 13px;"><strong>Don't miss this deadline to secure your rate and your spot at Horeb Camp 2026!</strong></p>

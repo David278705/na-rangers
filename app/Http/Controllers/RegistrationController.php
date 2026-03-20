@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Registration;
 use App\Mail\RegistrationConfirmation;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class RegistrationController extends Controller
 {
+    private const REOPEN_LIMIT = 10;
+    private const REOPENED_AT = '2026-03-20 00:00:00';
+
     public function index(Request $request)
     {
         $query = Registration::query();
@@ -110,12 +114,37 @@ class RegistrationController extends Controller
         return '"' . $value . '"';
     }
 
+    private function registrationWindowStats(): array
+    {
+        $reopenedAt = Carbon::parse(self::REOPENED_AT);
+        $registeredSinceReopen = Registration::where('created_at', '>=', $reopenedAt)->count();
+        $remaining = max(self::REOPEN_LIMIT - $registeredSinceReopen, 0);
+
+        return [
+            'open' => $remaining > 0,
+            'remaining' => $remaining,
+            'limit' => self::REOPEN_LIMIT,
+            'registered_since_reopen' => $registeredSinceReopen,
+            'reopened_at' => $reopenedAt->toDateTimeString(),
+        ];
+    }
+
+    public function status()
+    {
+        return response()->json($this->registrationWindowStats());
+    }
+
     public function store(Request $request)
     {
-        return response()->json([
-            'success' => false,
-            'message' => 'Las inscripciones están cerradas.',
-        ], 403);
+        $registrationStatus = $this->registrationWindowStats();
+
+        if (!$registrationStatus['open']) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Las inscripciones están cerradas.',
+                'remaining' => 0,
+            ], 403);
+        }
 
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
@@ -154,6 +183,7 @@ class RegistrationController extends Controller
             'success' => true,
             'registration' => $registration,
             'message' => 'Registro completado exitosamente',
+            'remaining' => max($registrationStatus['remaining'] - 1, 0),
         ]);
     }
 
